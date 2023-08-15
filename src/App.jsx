@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Nigga React </h1>
+      <h1>Nigga React! </h1>
       {loading && <p>Loading your data...</p>}
       {!error && !loading && <pre>{JSON.stringify(data, null, 2)}</pre>}
       {error && !loading && <p>{error}</p>}
