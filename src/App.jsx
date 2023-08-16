@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const fetchData = async () => {
-  const nigga = await fetch(
+  const fetching = await fetch(
     "https://randomuser.me/api?results=10&seed=charles"
   );
-  return await nigga.json();
+  return await fetching.json();
 };
 
 export default function App() {
@@ -29,7 +29,7 @@ export default function App() {
 
   return (
     <>
-      <h1>Nigga React! </h1>
+      <h1> React! </h1>
       {loading && <p>Loading your data...</p>}
       {!error && !loading && <pre>{JSON.stringify(data, null, 2)}</pre>}
       {error && !loading && <p>{error}</p>}
